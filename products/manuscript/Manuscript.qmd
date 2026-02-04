@@ -1,6 +1,6 @@
 ---
-title: "Example Manuscript Template for a Data Analysis Project"
-author: ""
+title: "Assessing the Role of Age and Cumulative Smoking Exposure in Lung Cancer Risk"
+author: "Saraa Al-Jawad"
 format:
   docx:
     toc: false
@@ -10,9 +10,6 @@ bibliography: ../../assets/dataanalysis-references.bib
 csl: ../../assets/american-journal-of-epidemiology.csl
 ---
 
-The structure below is one possible setup for a manuscript stemming from a data analysis project. It loosely follows the structure of a standard scientific manuscript. Adjust as needed. You don't need to have exactly these sections, but the content covering those sections should be addressed.
-
-This uses [MS Word as output format](https://quarto.org/docs/output-formats/ms-word.html). See [the Quarto documentation](https://quarto.org/) for instructions on how to use other formats.
 
 
 ```{r, echo=FALSE, message=FALSE}
@@ -24,10 +21,7 @@ library(knitr)
 
 **Authors**  
 
-* First Author$^{1,2,*}$ (ORCID: 0000-0000-1234-5678) 
-* Second Author$^{3, *}$
-* Third Author$^{3, \dagger}$
-* Last Author$^{1, 2, \land}$ 
+Saraa Al Jawad  
 
 **Author affiliations**  
 
@@ -52,6 +46,10 @@ _Write a summary of your project._
 
 _It is recommended to use a structured abstract with Background/Methods/Results/Discussion sections._
 
+*I will just draft summary about the purpose of this project* *Still In progress*
+
+Lung cancer remains one of the leading causes of cancer-related mortality worldwide, with age and smoking exposure recognized as major risk factors. Understanding how these factors contribute to lung cancer risk is essential for improving prevention strategies and risk assessment. In this study, we examine the relationship between age, cumulative smoking exposure, and lung cancer risk using a structured data analysis approach in R. Exploratory data analysis will be performed to evaluate distributions, trends, and potential associations among variables, followed by statistical modeling to assess the independent and combined effects of age and smoking exposure on lung cancer outcomes. This analysis aims to determine whether increasing age and greater cumulative smoking exposure are associated with elevated lung cancer risk and to assess the relative strength of these factors.
+
 {{< pagebreak >}}
 
 
@@ -60,15 +58,40 @@ _It is recommended to use a structured abstract with Background/Methods/Results/
 ## General Background Information
 _Provide enough background on your topic that others can understand the why and how of your analysis_ 
 
+*Summary intro_draft* *IN PROGRESS*
+
+Lung cancer is one of the leading causes of cancer-related mortality worldwide and remains a major public health concern. Despite advances in screening and treatment, lung cancer often presents at advanced stages, leading to poor prognosis and high mortality rates. Identifying and understanding key risk factors is therefore essential for prevention efforts and early risk assessment.
+
+Age and smoking exposure are well-established risk factors for lung cancer. Risk increases with age due to cumulative biological changes and prolonged exposure to environmental carcinogens. Smoking exposure, particularly cumulative exposure over time, is strongly associated with lung cancer development and is considered the primary preventable risk factor. Examining these variables together allows for a clearer understanding of how they both contribute to disease risk.
+
+
+
 ## Description of data and data source
 _Describe what the data is, what it contains, where it is from, etc. Eventually this might be part of a methods section._
 
+
+The data used in this project were obtained from a publicly available dataset related to lung cancer risk factors. The dataset contains individual-level observations including demographic information and smoking-related variables relevant to lung cancer outcomes. Key variables that will be used in this analysis include age, cumulative smoking exposure, and lung cancer status.
+
+
+
+```{r, echo=FALSE, message=FALSE}
+library(here)
+
+lung_data <- read.csv(
+  here("data", "raw-data", "lung_cancer.csv")
+)
+
+```
+
 ## Questions/Hypotheses to be addressed
-_State the research questions you plan to answer with this analysis._
 
-To cite other work (important everywhere, but likely happens first in introduction), make sure your references are in the BibTeX file specified in the YAML header above and have the right BibTeX key. Then you can include like this:
 
-Examples of reproducible research projects can for instance be found in [@mckay2020; @mckay2020a].
+The primary research question of this analysis is whether age and cumulative smoking exposure are associated with lung cancer risk.This project seeks to examine how lung cancer risk varies across different age groups and levels of smoking exposure.
+
+The main hypotheses are:
+1. Increasing age is associated with a higher risk of lung cancer.
+2. Greater cumulative smoking exposure is associated with an increased risk of lung cancer.
+3. Smoking exposure contributes more strongly to lung cancer risk than age when both factors are considered together.
 
 
 
@@ -78,6 +101,14 @@ Examples of reproducible research projects can for instance be found in [@mckay2
 # Methods 
 
 _Describe your methods. That should describe the data, the cleaning processes, and the analysis approaches. You might want to provide a shorter description here and all the details in the supplement._
+
+*Still In progress_this is just simple draft of planned analysis no details yet*
+
+## Planned analysis approach
+
+The analysis will begin with exploratory data analysis to examine the distributions of key variables and identify potential patterns or relationships between age, smoking exposure, and lung cancer status. Summary statistics and simple visualizations will be used to better understand the data and assess data quality.
+
+Following exploratory analysis, statistical modeling approaches will be applied to evaluate the association between age, smoking exposure, and lung cancer risk. Models will be used to assess the independent and combined effects of these predictors on lung cancer outcomes. Additional variables in the dataset may be considered in extended analyses as the project progresses, particularly in later stages of the course when multivariate and machine learning methods are introduced.
 
 
 ## Schematic of workflow
@@ -186,7 +217,17 @@ Note that this cited reference will show up at the end of the document, the refe
 
 {{< pagebreak >}}
 
+
+# Supplementary materials
+
+The raw data used in this analysis are stored in the project repository under `data/raw-data/`.
+
+
 # References
+
+
+
+
 
 
 

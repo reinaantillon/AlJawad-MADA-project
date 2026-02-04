@@ -1,6 +1,9 @@
-# Overview
 
-A template file and folder structure for a data analysis project/paper done with R/Quarto/GitHub. Other components (e.g., other programming languages) can be added as needed. 
+This is Saraa Al-Jawad’s MADA class project repository.
+
+# Overview
+A template file and folder structure for a data analysis project/paper done with R/Quarto/GitHub.
+
 
 
 # Pre-requisites
