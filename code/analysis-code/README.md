@@ -1,7 +1,5 @@
 # analysis-code
 
-# analysis-code
-
 This folder contains R scripts used to perform statistical analysis on the cleaned lung cancer dataset.
 
 ## Script description
